@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--La musique-->
@@ -37,6 +38,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="RQI-dd-K44" kind="show" id="2TP-lg-yRg"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -55,6 +59,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PME-Up-8Wc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="956" y="374"/>
+        </scene>
+        <!--SongVC-->
+        <scene sceneID="sL3-gc-2yc">
+            <objects>
+                <viewController id="RQI-dd-K44" customClass="SongVC" customModule="musicPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cie-Ve-Ib3"/>
+                        <viewControllerLayoutGuide type="bottom" id="XOQ-6z-hnK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dlg-Yl-Xdu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PWv-v7-QYs">
+                                <rect key="frame" x="0.0" y="64" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PWv-v7-QYs" secondAttribute="height" multiplier="1:1" id="X2d-pW-Ps6"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PWv-v7-QYs" firstAttribute="top" secondItem="cie-Ve-Ib3" secondAttribute="bottom" id="8E5-Xo-7pi"/>
+                            <constraint firstAttribute="leading" secondItem="PWv-v7-QYs" secondAttribute="leading" id="XS4-CC-Ru5"/>
+                            <constraint firstAttribute="trailing" secondItem="PWv-v7-QYs" secondAttribute="trailing" id="Zjs-Uk-qaW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="PWv-v7-QYs" id="1W9-NK-aEe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tLx-CS-ol5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1369" y="374"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="k94-zQ-H9N">
