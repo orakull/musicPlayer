@@ -8,18 +8,19 @@
 
 import UIKit
 
-class SongVC: UIViewController {
+class SongVC: UIViewController, SongDelegate {
 
 	var song: Song? {
 		didSet {
-			imageView?.image = song?.image
+			imageView?.image = song?.image ?? Constants.noImage
 			title = song?.title
+			song?.delegate = self
 		}
 	}
 	
 	@IBOutlet weak var imageView: UIImageView! {
 		didSet {
-			imageView.image = song?.image
+			imageView.image = song?.image ?? Constants.noImage
 		}
 	}
 	
@@ -33,7 +34,10 @@ class SongVC: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+	
+	func imageLoaded(song: Song) {
+		imageView.image = song.image
+	}
 
     /*
     // MARK: - Navigation
