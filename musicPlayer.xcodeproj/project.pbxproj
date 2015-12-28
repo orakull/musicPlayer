@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC3A957A1C305D42001DF2B6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3A95791C305D42001DF2B6 /* AVFoundation.framework */; };
 		BC8655921C2E0BCE00803301 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8655911C2E0BCE00803301 /* SwiftyJSON.swift */; };
+		BC8655951C2E451000803301 /* SongVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8655941C2E451000803301 /* SongVC.swift */; };
 		BCD169CA1C2DF6DB008805F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD169C91C2DF6DB008805F4 /* AppDelegate.swift */; };
 		BCD169CF1C2DF6DB008805F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCD169CD1C2DF6DB008805F4 /* Main.storyboard */; };
 		BCD169D11C2DF6DB008805F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCD169D01C2DF6DB008805F4 /* Assets.xcassets */; };
@@ -16,7 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC3A95791C305D42001DF2B6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		BC8655911C2E0BCE00803301 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		BC8655941C2E451000803301 /* SongVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongVC.swift; sourceTree = "<group>"; };
 		BCD169C61C2DF6DB008805F4 /* musicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = musicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD169C91C2DF6DB008805F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCD169CE1C2DF6DB008805F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC3A957A1C305D42001DF2B6 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +53,7 @@
 		BCD169BD1C2DF6DB008805F4 = {
 			isa = PBXGroup;
 			children = (
+				BC3A95791C305D42001DF2B6 /* AVFoundation.framework */,
 				BCD169C81C2DF6DB008805F4 /* musicPlayer */,
 				BCD169C71C2DF6DB008805F4 /* Products */,
 			);
@@ -65,8 +71,8 @@
 			isa = PBXGroup;
 			children = (
 				BCD169DC1C2DFE4A008805F4 /* MusicTableVC.swift */,
+				BC8655941C2E451000803301 /* SongVC.swift */,
 				BCD169CD1C2DF6DB008805F4 /* Main.storyboard */,
-				BCD169C91C2DF6DB008805F4 /* AppDelegate.swift */,
 				BC8655931C2E157400803301 /* openSource */,
 				BCD169DB1C2DF71B008805F4 /* others */,
 			);
@@ -76,6 +82,7 @@
 		BCD169DB1C2DF71B008805F4 /* others */ = {
 			isa = PBXGroup;
 			children = (
+				BCD169C91C2DF6DB008805F4 /* AppDelegate.swift */,
 				BCD169D01C2DF6DB008805F4 /* Assets.xcassets */,
 				BCD169D21C2DF6DB008805F4 /* LaunchScreen.storyboard */,
 				BCD169D51C2DF6DB008805F4 /* Info.plist */,
@@ -158,6 +165,7 @@
 				BC8655921C2E0BCE00803301 /* SwiftyJSON.swift in Sources */,
 				BCD169CA1C2DF6DB008805F4 /* AppDelegate.swift in Sources */,
 				BCD169DD1C2DFE4A008805F4 /* MusicTableVC.swift in Sources */,
+				BC8655951C2E451000803301 /* SongVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
