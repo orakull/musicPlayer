@@ -107,7 +107,7 @@
                         <viewControllerLayoutGuide type="bottom" id="XOQ-6z-hnK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dlg-Yl-Xdu">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PWv-v7-QYs">
@@ -116,16 +116,73 @@
                                     <constraint firstAttribute="width" secondItem="PWv-v7-QYs" secondAttribute="height" multiplier="1:1" id="X2d-pW-Ps6"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jt7-8g-eyy">
+                                <rect key="frame" x="0.0" y="384" width="320" height="184"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5iR-1g-VZt">
+                                        <rect key="frame" x="145" y="77" width="30" height="30"/>
+                                        <state key="normal" title="Play"/>
+                                        <connections>
+                                            <action selector="playPause" destination="RQI-dd-K44" eventType="touchUpInside" id="Ye9-bU-MyU"/>
+                                        </connections>
+                                    </button>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="OTP-ZP-frC">
+                                        <rect key="frame" x="18" y="44" width="284" height="31"/>
+                                        <connections>
+                                            <action selector="sliderTouchUpInside:" destination="RQI-dd-K44" eventType="touchUpInside" id="qip-xq-VZn"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--:--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hz3-jY-uph">
+                                        <rect key="frame" x="250" y="27.5" width="50" height="14.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="o0l-T8-7ME"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--:--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RyT-GK-LMF">
+                                        <rect key="frame" x="20" y="27" width="50" height="14.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="2DO-pk-fg5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="OTP-ZP-frC" firstAttribute="leading" secondItem="RyT-GK-LMF" secondAttribute="leading" id="5RX-Po-wOh"/>
+                                    <constraint firstItem="Hz3-jY-uph" firstAttribute="trailing" secondItem="OTP-ZP-frC" secondAttribute="trailing" id="7Od-1e-pJu"/>
+                                    <constraint firstItem="5iR-1g-VZt" firstAttribute="centerY" secondItem="Jt7-8g-eyy" secondAttribute="centerY" id="7s0-eh-uEL"/>
+                                    <constraint firstItem="OTP-ZP-frC" firstAttribute="top" secondItem="RyT-GK-LMF" secondAttribute="bottom" constant="2" id="G0g-PI-z8j"/>
+                                    <constraint firstItem="5iR-1g-VZt" firstAttribute="top" secondItem="OTP-ZP-frC" secondAttribute="bottom" constant="3" id="H5d-P5-C7J"/>
+                                    <constraint firstAttribute="trailing" secondItem="OTP-ZP-frC" secondAttribute="trailing" constant="20" symbolic="YES" id="QYd-57-QaQ"/>
+                                    <constraint firstItem="5iR-1g-VZt" firstAttribute="centerX" secondItem="Jt7-8g-eyy" secondAttribute="centerX" id="Vna-l6-k9Y"/>
+                                    <constraint firstItem="OTP-ZP-frC" firstAttribute="leading" secondItem="Jt7-8g-eyy" secondAttribute="leading" constant="20" symbolic="YES" id="hOR-0d-iBO"/>
+                                    <constraint firstItem="OTP-ZP-frC" firstAttribute="top" secondItem="Hz3-jY-uph" secondAttribute="bottom" constant="2" id="lm5-3y-uNO"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="PWv-v7-QYs" firstAttribute="top" secondItem="cie-Ve-Ib3" secondAttribute="bottom" id="8E5-Xo-7pi"/>
                             <constraint firstAttribute="leading" secondItem="PWv-v7-QYs" secondAttribute="leading" id="XS4-CC-Ru5"/>
+                            <constraint firstItem="Jt7-8g-eyy" firstAttribute="top" secondItem="PWv-v7-QYs" secondAttribute="bottom" id="YgK-U8-l4x"/>
                             <constraint firstAttribute="trailing" secondItem="PWv-v7-QYs" secondAttribute="trailing" id="Zjs-Uk-qaW"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Jt7-8g-eyy" secondAttribute="bottom" id="sHq-0g-rH5"/>
+                            <constraint firstItem="Jt7-8g-eyy" firstAttribute="leading" secondItem="dlg-Yl-Xdu" secondAttribute="leading" id="yed-rd-U02"/>
+                            <constraint firstAttribute="trailing" secondItem="Jt7-8g-eyy" secondAttribute="trailing" id="zYK-u4-5iH"/>
                         </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="durationLabel" destination="Hz3-jY-uph" id="rlz-K0-kf8"/>
                         <outlet property="imageView" destination="PWv-v7-QYs" id="1W9-NK-aEe"/>
+                        <outlet property="playPauseButton" destination="5iR-1g-VZt" id="ySm-AZ-Fsa"/>
+                        <outlet property="positionLabel" destination="RyT-GK-LMF" id="FeH-tp-Zy2"/>
+                        <outlet property="progressSlider" destination="OTP-ZP-frC" id="SYh-BV-Mqi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tLx-CS-ol5" userLabel="First Responder" sceneMemberID="firstResponder"/>

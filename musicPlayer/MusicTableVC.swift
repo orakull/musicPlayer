@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 @objc protocol SongDelegate {
 	optional func imageLoaded(song: Song)
