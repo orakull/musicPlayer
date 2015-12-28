@@ -119,21 +119,32 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jt7-8g-eyy">
                                 <rect key="frame" x="0.0" y="384" width="320" height="184"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5iR-1g-VZt">
-                                        <rect key="frame" x="145" y="77" width="30" height="30"/>
-                                        <state key="normal" title="Play"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5iR-1g-VZt">
+                                        <rect key="frame" x="135" y="82" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="7yq-BP-5s5"/>
+                                            <constraint firstAttribute="height" constant="64" id="UZE-Vc-loC"/>
+                                            <constraint firstAttribute="width" secondItem="5iR-1g-VZt" secondAttribute="height" multiplier="1:1" id="hn5-0w-eyz"/>
+                                        </constraints>
+                                        <state key="normal" image="playButton"/>
+                                        <state key="selected" image="pauseButton"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="UZE-Vc-loC"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="playPause" destination="RQI-dd-K44" eventType="touchUpInside" id="Ye9-bU-MyU"/>
                                         </connections>
                                     </button>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="OTP-ZP-frC">
-                                        <rect key="frame" x="18" y="44" width="284" height="31"/>
+                                        <rect key="frame" x="18" y="49" width="284" height="31"/>
                                         <connections>
                                             <action selector="sliderTouchUpInside:" destination="RQI-dd-K44" eventType="touchUpInside" id="qip-xq-VZn"/>
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--:--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hz3-jY-uph">
-                                        <rect key="frame" x="250" y="27.5" width="50" height="14.5"/>
+                                        <rect key="frame" x="250" y="77" width="50" height="14.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="o0l-T8-7ME"/>
                                         </constraints>
@@ -142,7 +153,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--:--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RyT-GK-LMF">
-                                        <rect key="frame" x="20" y="27" width="50" height="14.5"/>
+                                        <rect key="frame" x="20" y="77" width="50" height="14.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="2DO-pk-fg5"/>
                                         </constraints>
@@ -155,14 +166,20 @@
                                 <constraints>
                                     <constraint firstItem="OTP-ZP-frC" firstAttribute="leading" secondItem="RyT-GK-LMF" secondAttribute="leading" id="5RX-Po-wOh"/>
                                     <constraint firstItem="Hz3-jY-uph" firstAttribute="trailing" secondItem="OTP-ZP-frC" secondAttribute="trailing" id="7Od-1e-pJu"/>
-                                    <constraint firstItem="5iR-1g-VZt" firstAttribute="centerY" secondItem="Jt7-8g-eyy" secondAttribute="centerY" id="7s0-eh-uEL"/>
-                                    <constraint firstItem="OTP-ZP-frC" firstAttribute="top" secondItem="RyT-GK-LMF" secondAttribute="bottom" constant="2" id="G0g-PI-z8j"/>
+                                    <constraint firstItem="OTP-ZP-frC" firstAttribute="bottom" secondItem="RyT-GK-LMF" secondAttribute="top" constant="2" id="G0g-PI-z8j"/>
                                     <constraint firstItem="5iR-1g-VZt" firstAttribute="top" secondItem="OTP-ZP-frC" secondAttribute="bottom" constant="3" id="H5d-P5-C7J"/>
+                                    <constraint firstItem="5iR-1g-VZt" firstAttribute="centerX" secondItem="Jt7-8g-eyy" secondAttribute="centerX" id="I8O-0H-jgv"/>
+                                    <constraint firstItem="5iR-1g-VZt" firstAttribute="centerY" secondItem="Jt7-8g-eyy" secondAttribute="centerY" constant="15" id="JHR-Gh-gzM"/>
+                                    <constraint firstItem="OTP-ZP-frC" firstAttribute="top" secondItem="Jt7-8g-eyy" secondAttribute="top" priority="500" constant="20" symbolic="YES" id="N4f-9B-1mt"/>
                                     <constraint firstAttribute="trailing" secondItem="OTP-ZP-frC" secondAttribute="trailing" constant="20" symbolic="YES" id="QYd-57-QaQ"/>
-                                    <constraint firstItem="5iR-1g-VZt" firstAttribute="centerX" secondItem="Jt7-8g-eyy" secondAttribute="centerX" id="Vna-l6-k9Y"/>
                                     <constraint firstItem="OTP-ZP-frC" firstAttribute="leading" secondItem="Jt7-8g-eyy" secondAttribute="leading" constant="20" symbolic="YES" id="hOR-0d-iBO"/>
-                                    <constraint firstItem="OTP-ZP-frC" firstAttribute="top" secondItem="Hz3-jY-uph" secondAttribute="bottom" constant="2" id="lm5-3y-uNO"/>
+                                    <constraint firstItem="OTP-ZP-frC" firstAttribute="bottom" secondItem="Hz3-jY-uph" secondAttribute="top" constant="2" id="lm5-3y-uNO"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="N4f-9B-1mt"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -211,5 +228,7 @@
     </scenes>
     <resources>
         <image name="noAlbumArt" width="166" height="166"/>
+        <image name="pauseButton" width="64" height="64"/>
+        <image name="playButton" width="64" height="64"/>
     </resources>
 </document>
